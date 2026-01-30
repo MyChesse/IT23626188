@@ -1,13 +1,14 @@
 {
+  "name": "it23626188-assignment1",
+  "version": "1.0.0",
+  "description": "IT3040 Assignment 1 - Playwright Test Automation",
   "scripts": {
     "test": "playwright test",
     "test:ui": "playwright test --ui",
-    "test:debug": "playwright test --debug",
-    "test:chromium": "playwright test --project=chromium",
-    "test:firefox": "playwright test --project=firefox",
-    "test:webkit": "playwright test --project=webkit",
-    "test:report": "playwright show-report",
-    "playwright:install": "playwright install",
-    "playwright:install-chromium": "playwright install chromium"
+    "test:report": "playwright test --reporter=html"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.0.0"
   }
 }
