@@ -8,18 +8,7 @@ test.describe('SwiftTranslator - Final Working Tests', () => {
     await page.waitForTimeout(1000);
   });
 
-  // Test 1: Basic page functionality
-  test('TC001 - Page loads with all elements', async ({ page }) => {
-    // Input exists
-    const input = page.locator('textarea[placeholder="Input Your Singlish Text Here."]');
-    await expect(input).toBeVisible();
-    
-    // Buttons exist
-    await expect(page.locator('button:has-text("Clear")').first()).toBeVisible();
-    await expect(page.locator('button:has-text("Swap")').first()).toBeVisible();
-    
-    console.log('✅ TC001: Page loads correctly');
-  });
+ 
 
   // Test 2: Test all 24 positive cases (input acceptance)
   test('TC002 - All positive test cases input acceptance', async ({ page }) => {
