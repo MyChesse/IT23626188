@@ -19,3 +19,8 @@ git clone https://github.com/MyChesse/IT23626188.git
 cd IT23626188
 npm install
 npx playwright install
+
+## Test Structure
+- 24 positive test cases
+- 10 negative test cases  
+- 1 UI test case
