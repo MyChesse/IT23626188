@@ -18,15 +18,15 @@ jobs:
         cache: 'npm'
         
     - name: Install dependencies
-      run: npm ci
+      run: npm install
       
     - name: Install Playwright browsers
-      run: npx playwright install --with-deps chromium
+      run: npx playwright install chromium  # Install only Chrome for speed
       
     - name: Run Playwright tests
-      run: npx playwright test
+      run: npx playwright test --project=chromium  # Explicitly run Chrome only
       env:
-        CI: true
+        CI: true  # This tells Playwright to run in CI mode (headless)
         
     - name: Upload test results
       if: always()

@@ -11,6 +11,7 @@ export default defineConfig({
   
   use: {
     // UPDATE: Point to the actual website
+    headless: process.env.CI ? true : false,
     baseURL: 'https://www.swifttranslator.com',
     trace: 'on-first-retry',
     screenshot: 'only-on-failure',
@@ -34,7 +35,8 @@ export default defineConfig({
       name: 'firefox',
       use: { ...devices['Desktop Firefox'] },
     },
-    // Add mobile testing if needed
+
+      
     {
       name: 'Mobile Chrome',
       use: { ...devices['Pixel 5'] },
