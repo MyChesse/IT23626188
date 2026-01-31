@@ -23,9 +23,9 @@ test.describe('SwiftTranslator - Final Working Tests', () => {
       const typedText = await input.inputValue();
       
       expect(typedText).toBe(testCase.input);
-      console.log(`✅ ${testCase.id}: Input accepted`);
+      console.log(` ${testCase.id}: Input accepted`);
       
-      // Wait a bit between tests
+      
       await page.waitForTimeout(500);
     }
   });
@@ -43,7 +43,7 @@ test.describe('SwiftTranslator - Final Working Tests', () => {
       const typedText = await input.inputValue();
       
       expect(typedText).toBe(testCase.input);
-      console.log(`✅ ${testCase.id}: Input accepted (expected to fail translation)`);
+      console.log(` ${testCase.id}: Input accepted (expected to fail translation)`);
       
       await page.waitForTimeout(500);
     }
